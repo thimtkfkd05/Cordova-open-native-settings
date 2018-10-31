@@ -16,10 +16,10 @@
 	NSString* key = [command.arguments objectAtIndex:0];
 	NSString* prefix = @"App-Prefs:";
 	BOOL result = NO;
-
-	if(SYSTEM_VERSION_LESS_THAN(@"11.3")){
-        prefix = @"app-settings:";
-    }
+	
+	if(SYSTEM_VERSION_LESS_THAN(@"10.0")){
+	prefix = @"prefs:";
+	}
 
 	
     if ([key isEqualToString:@"application_details"]) {
